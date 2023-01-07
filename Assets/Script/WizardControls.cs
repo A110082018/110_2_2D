@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WizardControls : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class WizardControls : MonoBehaviour
     //Audio
     public AudioSource m_audioSource;
     public AudioClip m_hittedSound;
+    public string Scenes;
 
     //Animation
     private Animator Anim;
@@ -63,7 +65,8 @@ public class WizardControls : MonoBehaviour
             textPass.SetActive(true);
             if(ScoreControl.score >= 400)
             {
-                textPass.SetActive(true);
+                
+                SceneManager.LoadScene(Scenes);
             }
             else
             {
@@ -106,6 +109,7 @@ public class WizardControls : MonoBehaviour
                 Anim.SetTrigger("attack");
                 transform.position += new Vector3(speed, 0);
             }
+       
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -147,5 +151,6 @@ public class WizardControls : MonoBehaviour
         textRestart_text.text = "";
         }
     }
+
 
 }

@@ -604,7 +604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f138257815042a14a8be9d3ade3fc657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 0.03
   Heart1: {fileID: 1108653102}
   Heart2: {fileID: 1086714060}
   Heart3: {fileID: 1079285070}
@@ -617,6 +617,7 @@ MonoBehaviour:
   Bullet: {fileID: 3013458609978560898, guid: 686b14f65bad8b24c975bd706ef43de5, type: 3}
   m_audioSource: {fileID: 442432269}
   m_hittedSound: {fileID: 8300000, guid: 7c47b20bb9874304a809dc5580d403ba, type: 3}
+  Scenes: Game2
 --- !u!50 &442432268
 Rigidbody2D:
   serializedVersion: 4
