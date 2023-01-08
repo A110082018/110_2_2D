@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
+    //BG
     public float BGSpeed = 0.7f;
     public GameObject GameBackground1;
     public GameObject GameBackground2;
+
+    //text UI
+    public GameObject textRestart_vis;
+    public GameObject textFail;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +28,8 @@ public class GameControl : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.F1))
         {
             TimeControl.GameTime = 0;
+            textFail.SetActive(false);
+            textRestart_vis.SetActive(false);
 
             ScoreControl.score = 00;
             SceneManager.LoadScene(2);

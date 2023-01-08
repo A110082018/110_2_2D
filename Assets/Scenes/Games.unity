@@ -1606,6 +1606,8 @@ MonoBehaviour:
   BGSpeed: 0.7
   GameBackground1: {fileID: 1825748676}
   GameBackground2: {fileID: 291690694}
+  textRestart_vis: {fileID: 403713326}
+  textFail: {fileID: 196650117}
 --- !u!82 &1345060464
 AudioSource:
   m_ObjectHideFlags: 0

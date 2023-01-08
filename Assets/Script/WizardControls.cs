@@ -62,11 +62,14 @@ public class WizardControls : MonoBehaviour
         //Time limit = 30
         if(Time.time>30)
         {
-            textPass.SetActive(true);
+            
             if(ScoreControl.score >= 400)
             {
-                
-                SceneManager.LoadScene(Scenes);
+                textPass.SetActive(true);
+                if (SceneManager.GetActiveScene().buildIndex == 2)
+                    SceneManager.LoadScene(3);
+                else
+                    SceneManager.LoadScene(0);
             }
             else
             {
