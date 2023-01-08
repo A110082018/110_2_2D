@@ -107,6 +107,10 @@ public class WizardControls : MonoBehaviour
         }
 
         //bullet control || Attack
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            SceneManager.LoadScene("Games");
+        }
         if (Input.GetKeyDown(KeyCode.Space))
             {
                 Instantiate(Bullet, transform.position+new Vector3(0,1.5f,0), transform.rotation);

@@ -2,22 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Bosscontroller : MonoBehaviour
 {
+
     public GameObject Shot;
-    public float HP = 100;
+    static public float HP = 100;
     public float MAXHP = 100;
     public float speed = 0.1f;
     private Rigidbody2D rb;
     public float _moveRange = 3.0f;
     float centerY;
     private int counter = 0;
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("BossShot", 1, 0.03f);
 
         centerY = this.gameObject.transform.position.y;
@@ -50,23 +53,24 @@ public class Bosscontroller : MonoBehaviour
             }
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (gameObject.tag =="PlayerShot")
+        if (other.gameObject.tag == "PlayerShot")
         {
-            /* BulletControl bullet = gameObject.GetComponent<BulletControl>();
-             HP -= bullet.ATK;
-            */
+            /*BulletControl bullet = gameObject.GetComponent<BulletControl>();
+            HP -= bullet.ATK;*/
             HP -= 20;
+
         }
 
         if (HP <= 0)
         {
             gameObject.SetActive(false);
             Destroy(gameObject);
+            SceneManager.LoadScene("Title");
         }
 
     }
 
-    
+
 }

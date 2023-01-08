@@ -1539,6 +1539,7 @@ GameObject:
   - component: {fileID: 1330746840}
   - component: {fileID: 1330746842}
   - component: {fileID: 1330746841}
+  - component: {fileID: 1330746843}
   m_Layer: 5
   m_Name: HPbar
   m_TagString: Untagged
@@ -1586,11 +1587,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: b4f6f999807957d4685d139996cae3f0, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -1604,6 +1605,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330746839}
   m_CullTransparentMesh: 1
+--- !u!114 &1330746843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330746839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d58c9462e5552e48a91622eb2e5c062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1345060459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,7 +2412,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Shot: {fileID: 131202503}
-  HP: 100
   MAXHP: 100
   speed: 3
   _moveRange: 3

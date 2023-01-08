@@ -33,7 +33,7 @@ public class MainMenuSetting : MonoBehaviour
     public void ButtonStart()
     {
         print("Start");
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     //Button ScoreBoard
     public void ButtonScoreBoard()
