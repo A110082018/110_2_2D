@@ -24,5 +24,7 @@ public class BulletControl : MonoBehaviour
        
         if (collision.name == "wall_R")
             Destroy(this.gameObject , 3);
+        if (collision.name == "Boss")
+            Destroy(this.gameObject);
     }
 }

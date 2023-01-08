@@ -54,8 +54,10 @@ public class Bosscontroller : MonoBehaviour
     {
         if (gameObject.tag =="PlayerShot")
         {
-            BulletControl bullet = gameObject.GetComponent<BulletControl>();
-            HP -= bullet.ATK;
+            /* BulletControl bullet = gameObject.GetComponent<BulletControl>();
+             HP -= bullet.ATK;
+            */
+            HP -= 20;
         }
 
         if (HP <= 0)
