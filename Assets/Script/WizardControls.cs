@@ -26,6 +26,8 @@ public class WizardControls : MonoBehaviour
 
     //Def Bullet
     public GameObject Bullet;
+    public GameObject Bullet1; 
+    public GameObject Bullet2;
 
     //Audio
     public AudioSource m_audioSource;
@@ -112,7 +114,21 @@ public class WizardControls : MonoBehaviour
                 Anim.SetTrigger("attack");
                 transform.position += new Vector3(speed, 0);
             }
-       
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Instantiate(Bullet1, transform.position + new Vector3(0, 1.5f, 0), transform.rotation);
+            m_audioSource.Play();
+            Anim.SetTrigger("attack");
+            transform.position += new Vector3(speed, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Instantiate(Bullet2, transform.position + new Vector3(0, 1.5f, 0), transform.rotation);
+            m_audioSource.Play();
+            Anim.SetTrigger("attack");
+            transform.position += new Vector3(speed, 0);
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

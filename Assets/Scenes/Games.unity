@@ -620,6 +620,8 @@ MonoBehaviour:
   textPass: {fileID: 1569806334}
   textTime: {fileID: 455137634}
   Bullet: {fileID: 3013458609978560898, guid: 686b14f65bad8b24c975bd706ef43de5, type: 3}
+  Bullet1: {fileID: 3013458609978560898, guid: 487c86193789b6a4aac2c66361310fbd, type: 3}
+  Bullet2: {fileID: 3013458609978560898, guid: 82cbf43367800f446b0bcf34dd496440, type: 3}
   m_audioSource: {fileID: 442432269}
   m_hittedSound: {fileID: 8300000, guid: 7c47b20bb9874304a809dc5580d403ba, type: 3}
   Scenes: Game2
