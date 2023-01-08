@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletControl : MonoBehaviour
 {
     public float speed = 10;
-    
+    public int ATK = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +21,7 @@ public class BulletControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+       
         if (collision.name == "wall_R")
             Destroy(this.gameObject , 3);
     }

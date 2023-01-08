@@ -117,7 +117,7 @@ public class WizardControls : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //hitted by enemy
-        if (collision.name == "MonsterPref(Clone)") 
+        if (collision.tag == "Bullet") 
         {
             Destroy(collision.gameObject);
             m_audioSource.PlayOneShot(m_hittedSound);
